@@ -57,6 +57,13 @@ h6 {
   --text-size-medium: 1.6rem;
 }
 
+.block__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .button {
   border-radius: 5rem;
   padding: 1rem 3rem;
@@ -146,10 +153,6 @@ h6 {
   width: 10.2rem;
   height: 11.2rem;
   background-color: #121212;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .timer__item:not(:last-child) {
@@ -286,13 +289,6 @@ h6 {
   padding-right: 11rem;
 }
 
-.command__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .command__img {
   width: 19rem;
   height: 19rem;
@@ -322,13 +318,6 @@ h6 {
 
 .assembly {
   padding-bottom: 24.4rem;
-}
-
-.assembly__wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .assembly__header {
@@ -373,4 +362,80 @@ h6 {
 
 .assembly__item:not(:last-child) {
   margin-right: 3rem;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  padding: 3rem 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+}
+
+.modal__inner {
+  position: relative;
+  width: 66.3rem;
+  padding: 9rem 1rem;
+  background: #2c2c2c;
+  text-align: center;
+}
+
+.modal__header {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 140%;
+  margin-bottom: 1rem;
+}
+
+.modal__subheader {
+  margin-bottom: 2.8rem;
+  font-size: 1.6rem;
+  line-height: 160%;
+  opacity: 0.5;
+}
+
+.modal__elements {
+  width: 45.4rem;
+  margin: 0 auto 3.2rem auto;
+}
+
+.modal__item {
+  height: 4rem;
+}
+
+.modal__input {
+  width: 100%;
+  height: 100%;
+  background: grey;
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  line-height: 160%;
+  padding: 2rem;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+
+.modal__item:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+
+.modal__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.noscroll {
+  overflow: hidden;
+  height: 100%;
 }
